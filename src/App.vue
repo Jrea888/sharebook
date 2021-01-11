@@ -1,13 +1,17 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <Mian />
   </div>
 </template>
-
-<style> 
-
+<script>
+import Mian from "./views/main/Main";
+export default {
+  name: "App",
+  components: {
+    Mian
+  }
+};
+</script>
+<style>
+@import "./assets/css/common.css";
 </style>

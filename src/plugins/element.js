@@ -2,6 +2,7 @@ import Vue from 'vue'
 
 // 按需导入组件
 import {
+  Upload,
   Message,
   MessageBox,
   Form,
@@ -14,6 +15,7 @@ import Timeline from './timeline/index.js'
 import TimelineItem from './timeline-item/index.js'
 
 // 注册为全局组件
+Vue.use(Upload)
 Vue.use(Form)
 Vue.use(FormItem)
 Vue.use(Input)

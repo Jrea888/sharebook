@@ -62,7 +62,6 @@ export default {
 html,
 body {
   position: relative;
-  height: 100%;
 }
 .login {
   height: 400px;

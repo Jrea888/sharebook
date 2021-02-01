@@ -5,6 +5,8 @@ import store from './store'
 
 import './plugins/element.js'
 
+Vue.prototype.$bus = new Vue();
+
 Vue.config.productionTip = false
 
 new Vue({

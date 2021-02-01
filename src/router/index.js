@@ -2,14 +2,12 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 // 懒加载方式导入路由组件
 const Mian = () => import('../views/main/Main.vue')
-const Login = () => import('../views/login/Login.vue')
 const Home = () => import('../views/home/Home.vue');
-const Register = () => import('../views/register/Register.vue');
 Vue.use(VueRouter)
 
 const routes = [{
     path: '/',
-    redirect: '/login'
+    redirect: '/main'
   },
   {
     path: '/main',
@@ -18,17 +16,8 @@ const routes = [{
   },
   {
     path: '/home',
+    name: 'Home',
     component: Home
-  },
-  {
-    path: '/login',
-    name: 'Login',
-    component: Login
-  },
-  {
-    path: '/register',
-    name: 'Register',
-    component: Register
   }
 ]
 

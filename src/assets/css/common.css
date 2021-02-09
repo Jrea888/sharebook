@@ -117,3 +117,10 @@ li {
 .clearfix {
   zoom: 1;
 }
+
+/* 首页通用 */
+.content {
+  height: auto;
+  width: 1200px;
+  margin: 0 auto;
+}

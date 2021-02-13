@@ -1,5 +1,5 @@
 <template>
-  <div class="content">
+  <div class="content-lcoal">
     <strong>当前位置：</strong>
     <span>首页-->{{title}}</span>
   </div>
@@ -12,7 +12,7 @@ export default {
     title: {
       type: String,
       default: function() {
-        return "";
+        return "首页";
       }
     }
   },
@@ -24,9 +24,5 @@ export default {
 </script>
 
 <style scoped>
-.content{
-    height: 45px;
-    line-height: 45px;
-    font-size: 16px;
-}
+
 </style>

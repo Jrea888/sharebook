@@ -119,8 +119,23 @@ li {
 }
 
 /* 首页通用 */
-.content {
+.content-lcoal {
+  height: 45px;
+  line-height: 45px;
+  font-size: 16px;
+}
+
+div[class^="content"] {
   height: auto;
   width: 1200px;
   margin: 0 auto;
+}
+
+.contain {
+  height: auto;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgb(241, 241, 241);
+  box-shadow: 0 0px 5px #333;
 }

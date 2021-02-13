@@ -38,15 +38,9 @@
   </div>
 </template>
 
-<script>
-import Header from "@/views/header/Header.vue";
-import Footer from "@/views/footer/Footer.vue";
+<script> 
 export default {
   name: "Home",
-  components: {
-    Header,
-    Footer
-  },
   methods: {},
   mounted() {}
 };

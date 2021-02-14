@@ -5,9 +5,23 @@
         <span>个人图书共享系统</span>
       </div>
       <div class="right">
-        <img src="@/assets/image/musict.jpg" alt="用户" />
-        <span>欢迎你！张三</span>
-        <el-button class="out" type="success">退出系统</el-button>
+        <div @click="showSelect">
+          <img src="@/assets/image/top-login.jpg" alt="用户" />
+          <span>点击查看</span>
+        </div>
+        <div class="person">
+          <ul v-show="showInfo">
+            <li>
+              <a href="javascript:;" @click="psersonTo">个人信息</a>
+            </li>
+            <li>
+              <a href="javascript:;" @click="upDatePass">修改密码</a>
+            </li>
+            <li>
+              <a href="javascript:;" @click="loginOut">退出</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
     <div class="titile-img">
@@ -28,6 +42,7 @@ export default {
   components: {},
   data() {
     return {
+      showInfo: false,
       pageLists: [
         { name: "首页", id: "0", path: "/home" },
         { name: "我的上传", id: "1", path: "/myupload" },
@@ -43,6 +58,24 @@ export default {
     OtherPage() {},
     routeTo: function(path) {
       this.$router.push(path);
+    },
+    showSelect() {
+      if (!this.showInfo) {
+        this.showInfo = true;
+      } else {
+        this.showInfo = false;
+      }
+    },
+    psersonTo() {
+      this.$router.push("/personinfo");
+    },
+    upDatePass() {
+      this.$router.push("/modifypassword");
+    },
+    loginOut() {
+      // 退出 清除token 并 返回 登录页
+      window.sessionStorage.removeItem("token");
+      this.$router.push("/main");
     }
   }
 };
@@ -56,12 +89,14 @@ export default {
   background-color: #72b2f5;
   .right {
     position: absolute;
-    right: 0;
+    right: 5%;
     top: 50%;
+    cursor: pointer;
     transform: translate(-50%, -50%);
     img {
       width: 50px;
-      border-radius: 50%;
+      border-radius: 25%;
+      height: 40px;
     }
     span {
       display: inline-block;
@@ -70,8 +105,28 @@ export default {
       font-weight: bold;
       color: white;
     }
-    .out {
-      padding: 10px;
+    .person {
+      position: absolute;
+      width: 100px;
+      vertical-align: middle;
+      background-color: #fbf7f7;
+      margin: 15px 10px;
+      li {
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        &:hover {
+          background-color: #333;
+          a {
+            display: inline-block;
+            width: 100%;
+            &:hover {
+              color: white;
+            }
+          }
+        }
+      }
     }
   }
   .title-com {

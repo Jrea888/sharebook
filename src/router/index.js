@@ -9,6 +9,8 @@ const ShareBook = () => import('@/views/pages/ShareBook.vue');
 const LeaveMessage = () => import('@/views/pages/LeaveMessage.vue');
 const Announce = () => import('@/views/pages/Announce.vue');
 const FeedBack = () => import('@/views/pages/FeedBack.vue');
+const PersonInfo = () => import('@/views/pages/PersonInfo.vue');
+const ModifyPassWord = () => import('@/views/pages/ModifyPassWord.vue')
 Vue.use(VueRouter)
 
 const routes = [{
@@ -54,7 +56,17 @@ const routes = [{
     path:'/feedback',
     name: 'FeedBack',
     component:FeedBack
-  }
+  },
+  {
+    path:'/personinfo',
+    name: 'PersonInfo',
+    component:PersonInfo
+  },
+  {
+    path:'/modifypassword',
+    name: 'ModifyPassWord',
+    component:ModifyPassWord
+  },
 ]
 
 const router = new VueRouter({

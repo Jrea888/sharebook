@@ -1,7 +1,8 @@
 <template>
   <div class="content-lcoal">
     <strong>当前位置：</strong>
-    <span>首页-->{{title}}</span>
+    <span class="index" @click="returnIndex">首页</span>
+    -->{{title}}
   </div>
 </template>
 
@@ -19,10 +20,17 @@ export default {
   mounted() {},
   data() {
     return {};
+  },
+  methods: {
+    returnIndex() {
+      this.$router.push("/home");
+    }
   }
 };
 </script>
 
 <style scoped>
-
+.index {
+  cursor: pointer;
+}
 </style>

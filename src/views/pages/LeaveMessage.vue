@@ -11,9 +11,8 @@
         class="demo-ruleForm"
       >
         <el-form-item label="留言内容" prop="desc">
-          <el-input type="textarea" v-model="ruleForm.desc"></el-input>
+          <el-input type="textarea" :rows="6" v-model="ruleForm.desc"></el-input>
         </el-form-item>
-
         <el-form-item label="选择管理员" prop="region">
           <el-select v-model="ruleForm.region" placeholder="请选择活动区域">
             <el-option label="区域一" value="shanghai"></el-option>
